@@ -15,3 +15,18 @@ C:\Users\Developer\Documents\Visual Studio 2015\Projects\Produccion_Emision\Prod
 C:\Users\Developer\Documents\Visual Studio 2015\Projects\Produccion_Emision\Produccion_Emision\bin\Debug\Produccion_Emision.xml
 C:\Users\Developer\Documents\Visual Studio 2015\Projects\Produccion_Emision\Produccion_Emision\obj\Debug\Produccion_Emision.exe
 C:\Users\Developer\Documents\Visual Studio 2015\Projects\Produccion_Emision\Produccion_Emision\obj\Debug\Produccion_Emision.pdb
+C:\Users\Developer\Documents\GitHub\Produccion_Emision\Produccion_Emision\bin\Debug\Produccion_Emision.exe.config
+C:\Users\Developer\Documents\GitHub\Produccion_Emision\Produccion_Emision\obj\Debug\Interop.SAPbobsCOM.dll
+C:\Users\Developer\Documents\GitHub\Produccion_Emision\Produccion_Emision\obj\Debug\Interop.SAPbouiCOM.dll
+C:\Users\Developer\Documents\GitHub\Produccion_Emision\Produccion_Emision\obj\Debug\Produccion_Emision.vbproj.ResolveComReference.cache
+C:\Users\Developer\Documents\GitHub\Produccion_Emision\Produccion_Emision\obj\Debug\Produccion_Emision.exe
+C:\Users\Developer\Documents\GitHub\Produccion_Emision\Produccion_Emision\obj\Debug\Produccion_Emision.xml
+C:\Users\Developer\Documents\GitHub\Produccion_Emision\Produccion_Emision\obj\Debug\Produccion_Emision.pdb
+C:\Users\Developer\Documents\GitHub\Produccion_Emision\Produccion_Emision\bin\Debug\Produccion_Emision.exe
+C:\Users\Developer\Documents\GitHub\Produccion_Emision\Produccion_Emision\bin\Debug\Produccion_Emision.pdb
+C:\Users\Developer\Documents\GitHub\Produccion_Emision\Produccion_Emision\bin\Debug\Produccion_Emision.xml
+C:\Users\Developer\Documents\GitHub\Produccion_Emision\Produccion_Emision\obj\Debug\Produccion_Emision.vbprojResolveAssemblyReference.cache
+C:\Users\Developer\Documents\GitHub\Produccion_Emision\Produccion_Emision\obj\Debug\Produccion_Emision.Batchs.resources
+C:\Users\Developer\Documents\GitHub\Produccion_Emision\Produccion_Emision\obj\Debug\Produccion_Emision.FrmP.resources
+C:\Users\Developer\Documents\GitHub\Produccion_Emision\Produccion_Emision\obj\Debug\Produccion_Emision.Resources.resources
+C:\Users\Developer\Documents\GitHub\Produccion_Emision\Produccion_Emision\obj\Debug\Produccion_Emision.vbproj.GenerateResource.Cache

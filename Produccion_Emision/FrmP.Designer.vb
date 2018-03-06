@@ -22,8 +22,6 @@ Partial Class FrmP
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
-        Me.ToolStripStatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
@@ -32,25 +30,9 @@ Partial Class FrmP
         Me.txtOrder = New System.Windows.Forms.TextBox()
         Me.DGV2 = New System.Windows.Forms.DataGridView()
         Me.DGV = New System.Windows.Forms.DataGridView()
-        Me.StatusStrip1.SuspendLayout()
         CType(Me.DGV2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DGV, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'StatusStrip1
-        '
-        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel1})
-        Me.StatusStrip1.Location = New System.Drawing.Point(0, 256)
-        Me.StatusStrip1.Name = "StatusStrip1"
-        Me.StatusStrip1.Size = New System.Drawing.Size(362, 22)
-        Me.StatusStrip1.TabIndex = 74
-        Me.StatusStrip1.Text = "StatusStrip1"
-        '
-        'ToolStripStatusLabel1
-        '
-        Me.ToolStripStatusLabel1.Name = "ToolStripStatusLabel1"
-        Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(120, 17)
-        Me.ToolStripStatusLabel1.Text = "ToolStripStatusLabel1"
         '
         'Button3
         '
@@ -128,7 +110,7 @@ Partial Class FrmP
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(362, 278)
+        Me.ClientSize = New System.Drawing.Size(362, 255)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
@@ -137,20 +119,15 @@ Partial Class FrmP
         Me.Controls.Add(Me.Label13)
         Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.DGV)
-        Me.Controls.Add(Me.StatusStrip1)
         Me.Name = "FrmP"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Form1"
-        Me.StatusStrip1.ResumeLayout(False)
-        Me.StatusStrip1.PerformLayout()
+        Me.Text = "Emision de Produccion"
         CType(Me.DGV2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DGV, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents StatusStrip1 As StatusStrip
-    Friend WithEvents ToolStripStatusLabel1 As ToolStripStatusLabel
     Friend WithEvents Button3 As Button
     Friend WithEvents Button2 As Button
     Friend WithEvents Button1 As Button

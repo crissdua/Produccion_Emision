@@ -27,11 +27,9 @@ Public Class FrmP
             Return myCp
         End Get
     End Property
-    Public Sub New(ByVal user As String)
+    Public Sub New()
         MyBase.New()
         InitializeComponent()
-        '  Note which form has called this one
-        ToolStripStatusLabel1.Text = user
     End Sub
     Private Sub FrmFase1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         TextBox2.Select()
@@ -129,7 +127,7 @@ Public Class FrmP
                 Next
                 oReturn = oInvGenExit.Add
                 If oReturn <> 0 Then
-                    MessageBox.Show(con.oCompany.GetLastErrorDescription)
+                    MessageBox.Show(con.oCompany.GetLastErrorDescription & " O bien ya se realizo la Emision de la Orden")
                     ba.Clear()
                     quantity.Clear()
                 Else
@@ -177,11 +175,14 @@ Public Class FrmP
             i.DisplayIndex = 0
         End If
 
-        Dim SQL_da As SqlDataAdapter = New SqlDataAdapter("SELECT T0.ItemCode, T0.BaseQty, isnull(T0.LineNum,0) FROM WOR1 T0 where T0.[DocEntry] like '" + txtOrder.Text + "%'", con.ObtenerConexion())
+        Dim SQL_da As SqlDataAdapter = New SqlDataAdapter("SELECT T0.ItemCode, T0.PlannedQty, isnull(T0.LineNum,0) FROM WOR1 T0 where T0.[DocEntry] like '" + txtOrder.Text + "%'", con.ObtenerConexion())
         Dim DT_dat As System.Data.DataTable = New System.Data.DataTable()
         SQL_da.Fill(DT_dat)
         DGV2.DataSource = DT_dat
         con.ObtenerConexion.Close()
+        For Each row As DataGridViewRow In DGV2.Rows
+            row.Cells("CHK").Value = True
+        Next
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
@@ -209,7 +210,6 @@ Public Class FrmP
             txtOrder.Clear()
             DGV.DataSource = Nothing
             DGV2.DataSource = Nothing
-            MessageBox.Show("Inicie un objeto nuevo")
         End If
     End Sub
 
@@ -218,13 +218,11 @@ Public Class FrmP
         If result = DialogResult.No Then
             MessageBox.Show("Puede continuar")
         ElseIf result = DialogResult.Yes Then
-            MessageBox.Show("Finalizando modulo")
             Try
                 con.oCompany.Disconnect()
             Catch
             End Try
-            System.Windows.Forms.Application.Exit()
-            Me.Close()
+            Me.Hide()
         End If
     End Sub
 End Class

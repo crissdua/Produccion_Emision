@@ -69,23 +69,55 @@ SELECT ItemCode,BatchNum, Disponible, A_Utilizar  from batchs where Disponible >
         End If
     End Sub
 
-    Private Sub BatchsFase2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
 
     Private Sub DGV_KeyUp(sender As Object, e As KeyEventArgs) Handles DGV.KeyUp
-        Dim suma As Double
-        Dim queda As Double
-        For Each row As DataGridViewRow In DGV.Rows
-            suma += Val(row.Cells(4).Value)
-        Next
-
-        queda = Decimal.Round((Convert.ToDouble(Label2.Text) - suma), 3, MidpointRounding.AwayFromZero)
-        'queda = Convert.ToDouble(Label2.Text) - suma
-        Label6.Text = queda
-        Label6.Refresh()
 
     End Sub
 
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Try
 
+
+            Dim suma As Double
+            Dim queda As Double
+            For Each row As DataGridViewRow In DGV.Rows
+                suma += Val(row.Cells(4).Value)
+            Next
+
+            queda = Decimal.Round((Convert.ToDouble(Label2.Text)), 3, MidpointRounding.AwayFromZero)
+            If queda = suma Then
+                Label6.Text = queda - suma
+                Label6.Refresh()
+                Button2.Visible = True
+                Button1.Visible = True
+            Else
+                'queda = Convert.ToDouble(Label2.Text) - suma
+                Label6.Text = queda - suma
+                Label6.Refresh()
+            End If
+        Catch ex As Exception
+            MessageBox.Show("Verifique que los CHECK esten correctos o no existan campos vacios seleccionados")
+        End Try
+    End Sub
+
+
+
+    Private Sub DGV_CellBeginEdit(sender As Object, e As DataGridViewCellCancelEventArgs) Handles DGV.CellBeginEdit
+        Dim i, j As Integer
+        i = DGV.CurrentRow.Index
+        DGV.Rows(i).Cells(DGV.Columns("CHK").Index).Value = True
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Dim result As Integer = MessageBox.Show("Desea salir del modulo?", "Atencion", MessageBoxButtons.YesNo)
+        If result = DialogResult.No Then
+            MessageBox.Show("Puede continuar")
+        ElseIf result = DialogResult.Yes Then
+            Try
+                con.oCompany.Disconnect()
+            Catch
+            End Try
+            Me.Hide()
+        End If
+    End Sub
 End Class
