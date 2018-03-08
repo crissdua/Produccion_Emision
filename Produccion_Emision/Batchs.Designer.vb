@@ -37,16 +37,17 @@ Partial Class Batchs
         '
         'DGV
         '
+        Me.DGV.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
         Me.DGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DGV.Location = New System.Drawing.Point(12, 31)
+        Me.DGV.Location = New System.Drawing.Point(12, 51)
         Me.DGV.Name = "DGV"
-        Me.DGV.Size = New System.Drawing.Size(490, 150)
+        Me.DGV.Size = New System.Drawing.Size(490, 214)
         Me.DGV.TabIndex = 16
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(529, 108)
+        Me.Label6.Location = New System.Drawing.Point(529, 156)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(13, 13)
         Me.Label6.TabIndex = 23
@@ -55,7 +56,7 @@ Partial Class Batchs
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(508, 44)
+        Me.Label5.Location = New System.Drawing.Point(508, 92)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(56, 13)
         Me.Label5.TabIndex = 22
@@ -63,17 +64,19 @@ Partial Class Batchs
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(244, 192)
+        Me.Button1.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.Button1.BackgroundImage = Global.Produccion_Emision.My.Resources.Resources.crear
+        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.Button1.Location = New System.Drawing.Point(243, 282)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.Size = New System.Drawing.Size(67, 23)
         Me.Button1.TabIndex = 21
-        Me.Button1.Text = "Aceptar"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(270, 4)
+        Me.Label4.Location = New System.Drawing.Point(270, 27)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(39, 13)
         Me.Label4.TabIndex = 20
@@ -82,7 +85,7 @@ Partial Class Batchs
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(218, 4)
+        Me.Label3.Location = New System.Drawing.Point(218, 27)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(45, 13)
         Me.Label3.TabIndex = 19
@@ -91,7 +94,7 @@ Partial Class Batchs
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(529, 59)
+        Me.Label2.Location = New System.Drawing.Point(529, 107)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(13, 13)
         Me.Label2.TabIndex = 18
@@ -100,7 +103,7 @@ Partial Class Batchs
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(516, 92)
+        Me.Label1.Location = New System.Drawing.Point(516, 140)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(45, 13)
         Me.Label1.TabIndex = 17
@@ -108,27 +111,34 @@ Partial Class Batchs
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(163, 192)
+        Me.Button2.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.Button2.BackgroundImage = Global.Produccion_Emision.My.Resources.Resources.button
+        Me.Button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.Button2.Location = New System.Drawing.Point(162, 282)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
+        Me.Button2.Size = New System.Drawing.Size(67, 23)
         Me.Button2.TabIndex = 24
         Me.Button2.Text = "Verificar"
         Me.Button2.UseVisualStyleBackColor = True
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(326, 192)
+        Me.Button3.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.Button3.BackgroundImage = Global.Produccion_Emision.My.Resources.Resources.cancelar
+        Me.Button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.Button3.Location = New System.Drawing.Point(325, 282)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(75, 23)
+        Me.Button3.Size = New System.Drawing.Size(67, 23)
         Me.Button3.TabIndex = 25
-        Me.Button3.Text = "Cancelar"
         Me.Button3.UseVisualStyleBackColor = True
         '
         'Batchs
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(574, 227)
+        Me.BackgroundImage = Global.Produccion_Emision.My.Resources.Resources.fondoGrande
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ClientSize = New System.Drawing.Size(574, 326)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.DGV)
@@ -139,6 +149,7 @@ Partial Class Batchs
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
+        Me.DoubleBuffered = True
         Me.Name = "Batchs"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Batchs"

@@ -117,6 +117,7 @@ SELECT ItemCode,BatchNum, Disponible, A_Utilizar  from batchs where Disponible >
                 con.oCompany.Disconnect()
             Catch
             End Try
+            MessageBox.Show("Cancele el Objeto e inicie nuevamente")
             Me.Hide()
         End If
     End Sub
